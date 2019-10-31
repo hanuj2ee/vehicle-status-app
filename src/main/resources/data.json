@@ -1,0 +1,65 @@
+[
+	{
+		"id": 1,
+		"name": "Kalles Grustransporter AB",
+		"address": "Cementvägen 8, 111 11 Södertälje",
+		"vehicles": [
+			{
+				"vehicleId": "YS2R4X20005399401",
+				"regNumber": "ABC123",
+				"status": "Connected",
+				"imagePath":"car-1.jpg"
+			},
+			{
+				"vehicleId": "VLUR4X20009093588",
+				"regNumber": "DEF456",
+				"status": "Connected",
+				"imagePath":"car-2.jpg"
+			},
+			{
+				"vehicleId": "VLUR4X20009048066",
+				"regNumber": "GHI789",
+				"status": "Connected",
+				"imagePath":"car-3.jpg"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Johans Bulk AB",
+		"address": "Balkvägen 12, 222 22 Stockholm",
+		"vehicles": [
+			{
+				"vehicleId": "YS2R4X20005388011",
+				"regNumber": "JKL012",
+				"status": "Connected",
+				"imagePath":"car-4.jpg"
+			},
+			{
+				"vehicleId": "YS2R4X20005387949",
+				"regNumber": "MNO345",
+				"status": "Connected",
+				"imagePath":"car-5.jpg"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Haralds Värdetransporter AB",
+		"address": "Budgetvägen 1, 333 33 Uppsala",
+		"vehicles": [
+			{
+				"vehicleId": "VLUR4X20009048076",
+				"regNumber": "PQR678",
+				"status": "Connected",
+				"imagePath":"car-6.jpg"
+			},
+			{
+				"vehicleId": "YS2R4X20005387055",
+				"regNumber": "STU901",
+				"status": "Connected",
+				"imagePath":"car-7.jpg"
+			}
+		]
+	}
+]
