@@ -8,7 +8,7 @@ import com.vsa.dao.model.OwnerModel;
 /**
  * Repository for Owner
  * 
- * @author Hunumant
+ * @author Hanumant
  *
  */
 @Repository

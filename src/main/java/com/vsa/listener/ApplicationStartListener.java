@@ -1,7 +1,5 @@
 package com.vsa.listener;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 
@@ -10,8 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
-import org.springframework.util.ResourceUtils;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -43,9 +41,8 @@ public class ApplicationStartListener {
 	public void init(final ApplicationReadyEvent event) {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			File file = ResourceUtils.getFile("classpath:data.json");
-
-			List<Owner> owners = mapper.readValue(new FileInputStream(file),
+			ClassPathResource resource = new ClassPathResource("/data.json");
+			List<Owner> owners = mapper.readValue(resource.getInputStream(),
 					new TypeReference<List<Owner>>() {
 					});
 			for (Owner owner : owners) {
@@ -56,6 +53,7 @@ public class ApplicationStartListener {
 					vehicleService.addVehicle(vehicle);
 				}
 			}
+
 		} catch (IOException e) {
 			logger.error("Failed to initalize the database", e);
 		}

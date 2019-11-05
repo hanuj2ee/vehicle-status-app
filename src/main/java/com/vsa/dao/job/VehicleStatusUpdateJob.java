@@ -24,13 +24,16 @@ import com.vsa.rest.model.Vehicle;
  *
  */
 public class VehicleStatusUpdateJob {
+
+	@Autowired
+	private VehicleService vehicleService;
+	@Autowired
+	private Random random;
 	/**
 	 * Logger Instance
 	 */
-	@Autowired
-	private VehicleService vehicleService;
-	private Random random = new Random(2);
-	private final Logger logger = LoggerFactory.getLogger(VehicleService.class);
+	private final Logger logger = LoggerFactory
+			.getLogger(VehicleStatusUpdateJob.class);
 
 	@Scheduled(fixedDelayString = "${fixedDelay.in.milliseconds}")
 	public void schedule() {

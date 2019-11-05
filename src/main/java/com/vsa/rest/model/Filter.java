@@ -14,6 +14,7 @@ import lombok.Setter;
  * @author Hanumant
  *
  */
+
 public class Filter {
 	private String status;
 	private List<Long> owners = new ArrayList<Long>();

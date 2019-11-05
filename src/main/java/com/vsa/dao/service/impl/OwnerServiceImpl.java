@@ -70,7 +70,7 @@ public class OwnerServiceImpl implements OwnerService {
 			logger.debug("Owner details saved successfully");
 			return model;
 		} catch (Exception e) {
-			throw new FindException("Failed to get the owner");
+			throw new FindException("Failed to get the owner", e);
 		}
 	}
 

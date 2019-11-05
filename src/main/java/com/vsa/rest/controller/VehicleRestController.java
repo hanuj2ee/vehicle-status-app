@@ -3,6 +3,7 @@ package com.vsa.rest.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,8 +31,8 @@ import com.vsa.rest.util.Constants;
 public class VehicleRestController {
 	@Autowired
 	private VehicleService vehicleService;
-	@Autowired
-	private Filter filter = new Filter();
+	@Autowired(required = true)
+	private Filter filter;
 
 	@GetMapping("/vehicles")
 	public ResponseEntity<Response> getVehicles(

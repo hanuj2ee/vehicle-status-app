@@ -25,7 +25,7 @@ import com.vsa.rest.util.Constants;
  * {@link VSAExceptionHandler} is the exception handler at application level
  * which extends the functionality of {@link ResponseEntityExceptionHandler}
  *
- * @author Hanumat
+ * @author Hanumant
  *
  */
 @ControllerAdvice

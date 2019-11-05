@@ -10,14 +10,14 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.vsa</groupId>
-	<artifactId>status</artifactId>
+	<artifactId>vsa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>vehicle-status-app</name>
 	<description>This is TIBCO BusinessEvents Rule Management System</description>
 
 	<properties>
+		<docker.image.prefix>vehicle-status-app</docker.image.prefix>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 	</properties>
 
 	<dependencies>
@@ -47,12 +47,51 @@
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
+		<finalName>vehicle-status-app</finalName>
 		<plugins>
+			<plugin>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<version>3.1.12</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.9</version>
+				<configuration>
+					<!-- replace `callicoder` with your docker id -->
+					<repository>${docker.image.prefix}/${project.artifactId}</repository>
+					<tag>${project.version}</tag>
+					<buildArgs>
+						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>default</id>
+						<phase>install</phase>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

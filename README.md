@@ -1,10 +1,13 @@
 # Vehicle Status Application
 This is the backed project implmented using spring boot. 
 
-##Pre-Requisite
+## Pre-Requisite
 
+### Backend
+	Java 11
+        Maven
 
-
-##Build
-TeamCity is used to do CICD of the application.
+## Build
+Travis is used to do CICD of the application.
+### 
 
