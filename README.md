@@ -6,8 +6,11 @@ This is the backed project implmented using spring boot.
 ### Backend
 	Java 11
         Maven
+### Front End
+	Node Js latest
+	Angular latest
 
 ## Build
-Travis is used to do CICD of the application.
+TeamCity is used to do CICD of the application.
 ### 
 
