@@ -1,14 +1,15 @@
+env:
+  global:
+    secure: QoiAoQe4IXccn6n17SpVmvgQkhrK2Toyhz67FIjm+9IK/s9ryt2fdq7RMxQLpkHh5JPbFDM44WpiWECtxtxJbW6r8ECeJJCsR3O5Upk7u+avYs3tTkLXllDgTrUoVE+GHl/W2zFNXjEiBhZ6TSWMoucElfyf0b0OfDLjZVocW0QZ+xN6KzUam8ExDLiaShkdnLJbikG5bdfw0ya+vQro/rzXlMxOV/fZyF8xp2b5hokmL8jmcEXjSrzPSXbyK6KFvXkNbSrHatsDZ+5I7d3OOjNjJT5hRYKBFqnJl9wOpBfASU0MK8zIfolwZHkpL1NOBlJ2snXGwRiZQAgnfm3gkOTGVoMYLwSQ8nRI2+2yvHk37BcrqENuAlRScrWofkr1whio2MsNMhbf/2X7uFuicHPCVr/KSwa5/bgayPCEbSLfcnliDK/7VtBFN/QpKc7EbhAZZAMejoqh9he9czf+APW5bedKu5OqBBEl18ZRn1SzdMRwHl/KXiQgn7ffzUSd0y1/nyIdSUQgPN9yhqe/xxvC47YX2ac3fmAXPaszKugppwsfJEyAI++WEIQEV9aikxAUgO4nXPTKbEqyDVPRJ7grgFwt9218hmKloJAS2hKpdourSpI78q0HuAPFZr8xrRh2BKB9h8dV+LrLkSNzsrdzi7xx0O95oMJao505E40=
 language: java
 jdk:
 - openjdk8
 services:
-  - docker 
+- docker
 install:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-
 script:
 - mvn test install
-
 after_success:
 - docker --version
 - pip install --user awscli
