@@ -1,0 +1,14 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: "vehiclestatusapp"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: "vehiclestatusapp"
+    spec:
+      containers:
+      - name: "vehiclestatusapp-container"
+        image: "637449251545.dkr.ecr.us-east-2.amazonaws.com/vehicle-status-app:latest"        

@@ -76,7 +76,6 @@
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.9</version>
 				<configuration>
-					<!-- replace `callicoder` with your docker id -->
 					<repository>${docker.image.prefix}/${project.artifactId}</repository>
 					<tag>latest</tag>
 					<buildArgs>
