@@ -62,14 +62,14 @@ spec:
             # AWS key id for authenticating with the AWS API.
             # This is only here for examples. It's recommended you instead use
             # a project like kube2iam for granting access.
-            - name: AWS_ACCESS_KEY_ID
-              value: AKIAZI2XPVLMZ6IN3ZLF #Update this to your access key
-            
+            #- name: AWS_ACCESS_KEY_ID
+            #  value: ACCESS_KEY_VALUE #Update this to your access key
+            #
             # AWS key secret for authenticating with the AWS API.
             # This is only here for examples. It's recommended you instead use
             # a project like kube2iam for granting access.
-            - name: AWS_SECRET_ACCESS_KEY
-              value: CIbOAtKMwB4huHYAdeK6XG5/x1rmxp8VH/qg1pv1 #Update this to your secret access key
+            #- name: AWS_SECRET_ACCESS_KEY
+            #  value: SECRET_ACCESS_KEY_VALUE #Update this to your secret access key
           # Repository location of the ALB Ingress Controller.
           image: 894847497797.dkr.ecr.us-west-2.amazonaws.com/aws-alb-ingress-controller:v1.0.0
           imagePullPolicy: Always
