@@ -13,7 +13,7 @@
 	<artifactId>vsa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>vehicle-status-app</name>
-	<description>This is TIBCO BusinessEvents Rule Management System</description>
+	<description>This is Vehicle Status Management System</description>
 
 	<properties>
 		<docker.image.prefix>vehicle-status-app</docker.image.prefix>
